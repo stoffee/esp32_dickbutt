@@ -77,8 +77,8 @@ static const unsigned char PROGMEM dickbutt_bmp[] =
 //define inverted dickbutt
 #define DICKBUTT_HEIGHT 32 
 #define DICKBUTT_WIDTH  32 
-static const unsigned char PROGMEM dickbutt_inverted_bmp[] =
-{{
+static const unsigned char PROGMEM inverted_dickbutt_bmp[] =
+{
 	0xFF, 0xE7, 0xFF, 0xFF, // ###########  ###################
 	0xFF, 0xC3, 0xFF, 0xFF, // ##########    ##################
 	0xFF, 0xC1, 0x3F, 0xFF, // ##########     #  ##############
@@ -112,7 +112,6 @@ static const unsigned char PROGMEM dickbutt_inverted_bmp[] =
 	0xFF, 0xF3, 0x18, 0xFF, // ############  ##   ##   ########
 	0xFF, 0xFF, 0x9C, 0xFF, // #################  ###  ########
 };
-}
 
 char inChar;
 String string;
@@ -143,7 +142,7 @@ void loop()
     switch (key)
     {
       case '0':
-  display.setTextSize(2);
+  /*display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 0");
@@ -151,14 +150,13 @@ void loop()
   display.startscrollright(0x00, 0x0F);
   delay(2000);
   display.stopscroll();
-  display.clearDisplay();
+  display.clearDisplay();*/
 // stupid "looks like walking" dickbutt
   walkingdickbutt();
-//  delay(1000);
   display.clearDisplay();
         break;
          case '1':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 1");
@@ -166,9 +164,9 @@ void loop()
   display.startscrollright(0x00, 0x0F);
   delay(2000);
   display.stopscroll();
-        break;
+  break;
        case '2':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 2");
@@ -178,27 +176,31 @@ void loop()
   display.stopscroll();
         break;
          case '3':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
-  display.println("You Pushed Fucking 3");
+  display.println("Quack!");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
   display.stopscroll();
         break;
         case '4':
-  display.setTextSize(2);
+/*  display.setTextSize(2);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 4");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();;
+  display.stopscroll();
+  display.clearDisplay();*/
+// inverted walking dickbutt
+  invertedwalkingdickbutt();
+  display.clearDisplay();
         break;
       case '5':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 5");
@@ -208,7 +210,7 @@ void loop()
   display.stopscroll();
         break;
          case '6':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 6");
@@ -218,7 +220,7 @@ void loop()
   display.stopscroll();
         break;
       case '7':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 7");
@@ -228,7 +230,7 @@ void loop()
   display.stopscroll();
         break;
         case '8':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 8");
@@ -238,7 +240,7 @@ void loop()
   display.stopscroll();
         break;
         case '9':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 9");
@@ -248,7 +250,7 @@ void loop()
   display.stopscroll();
         break;
         case '.':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking .");
@@ -258,7 +260,7 @@ void loop()
   display.stopscroll();
         break;
    case ',':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking ,");
@@ -268,7 +270,7 @@ void loop()
   display.stopscroll();
         break;
    case '!':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking !");
@@ -278,7 +280,7 @@ void loop()
   display.stopscroll();
         break;
    case '@':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking @");
@@ -288,7 +290,7 @@ void loop()
   display.stopscroll();
         break;
    case '#':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking #");
@@ -298,7 +300,7 @@ void loop()
   display.stopscroll();
         break;
    case '$':
-  display.setTextSize(2);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking $");
