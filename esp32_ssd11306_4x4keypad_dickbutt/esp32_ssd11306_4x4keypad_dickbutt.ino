@@ -78,41 +78,43 @@ static const unsigned char PROGMEM dickbutt_bmp[] =
 #define DICKBUTT_HEIGHT 32 
 #define DICKBUTT_WIDTH  32 
 static const unsigned char PROGMEM inverted_dickbutt_bmp[] =
-{
-	0xFF, 0xE7, 0xFF, 0xFF, // ###########  ###################
-	0xFF, 0xC3, 0xFF, 0xFF, // ##########    ##################
-	0xFF, 0xC1, 0x3F, 0xFF, // ##########     #  ##############
-	0xFF, 0xC0, 0x3F, 0xFF, // ##########        ##############
-	0xFF, 0x80, 0x23, 0xFF, // #########         #   ##########
-	0xFF, 0x80, 0x00, 0x7F, // #########                #######
-	0xFF, 0x82, 0x00, 0x1F, // #########     #            #####
-	0xFF, 0xF8, 0x00, 0x0F, // #############               ####
-	0xFF, 0xE0, 0x00, 0x1F, // ###########                #####
-	0xFF, 0xE0, 0x00, 0x3F, // ###########               ######
-	0xFF, 0xC8, 0x04, 0x1F, // ##########  #        #     #####
-	0xFF, 0xC0, 0x87, 0x1F, // ##########      #    ###   #####
-	0xFF, 0xC0, 0x07, 0xFF, // ##########           ###########
-	0xFF, 0x80, 0x0F, 0xFF, // #########           ############
-	0xFF, 0x80, 0x0F, 0xFF, // #########           ############
-	0xFF, 0x80, 0x0C, 0x3F, // #########           ##    ######
-	0xFF, 0x00, 0x1C, 0x3F, // ########           ###    ######
-	0xFF, 0x00, 0x00, 0x3F, // ########                  ######
-	0xFF, 0x00, 0x00, 0x3F, // ########                  ######
-	0xFF, 0x80, 0x00, 0x7F, // #########                #######
-	0xFF, 0x80, 0x00, 0x7F, // #########                #######
-	0xFF, 0x80, 0x00, 0x7F, // #########                #######
-	0xFD, 0x80, 0x00, 0x7F, // ###### ##                #######
-	0xF8, 0x00, 0x00, 0x7F, // #####                    #######
-	0xF8, 0x00, 0x01, 0xFF, // #####                  #########
-	0xF8, 0x00, 0x03, 0xFF, // #####                 ##########
-	0xF0, 0x00, 0x3F, 0xFF, // ####              ##############
-	0xF0, 0x20, 0x08, 0x3F, // ####      #         #     ######
-	0xF8, 0x20, 0x00, 0x3F, // #####     #               ######
-	0xFC, 0x61, 0x00, 0x3F, // ######   ##    #          ######
-	0xFF, 0xF3, 0x18, 0xFF, // ############  ##   ##   ########
-	0xFF, 0xFF, 0x9C, 0xFF, // #################  ###  ########
-};
+{0xD8, 0x8F, 0x26, 0x03, 0x88, 0x88, 0x38, 0x00, 
+0x88, 0x88, 0x30, 0x00, 0x90, 0x07, 0x38, 0x00, 
+0xC0, 0x38, 0x24, 0x00, 0x00, 0x80, 0x02, 0x00, 
+0x00, 0x02, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 
+0x07, 0x38, 0x00, 0x00, 0x0F, 0x30, 0x00, 0x00, 
+0x05, 0x18, 0x00, 0x00, 0x09, 0xD8, 0x00, 0x00, 
+0x08, 0x01, 0x02, 0x00, 0x08, 0x01, 0x02, 0x00, 
+0x08, 0x01, 0x00, 0x00, 0x08, 0x0D, 0x04, 0x00, 
+0x00, 0x0D, 0x88, 0x80, 0x00, 0x0C, 0x28, 0xC0, 
+0x00, 0x04, 0x02, 0x60, 0x04, 0x04, 0x00, 0x20, 
+0x00, 0x06, 0x00, 0xC0, 0x02, 0x0C, 0x00, 0x00, 
+0x01, 0x00, 0x01, 0x00, 0x00, 0x80, 0x02, 0x00, 
+0x00, 0x38, 0x38, 0x00, 0x00, 0x32, 0x80, 0x00, 
+0x01, 0x33, 0x80, 0x07, 0x01, 0xE1, 0x00, 0x3C, 
+0x1A, 0xE0, 0xC3, 0x04, 0x12, 0x05, 0x1C, 0x06, 
+0x0F, 0x07, 0x04, 0x01, 0x89, 0x83, 0x00, 0x01};
 
+//define skull
+#define SKULL_HEIGHT 32 
+#define SKULL_WIDTH  32 
+static const unsigned char PROGMEM skull_bmp[] =
+{0x07, 0x00, 0x00, 0xE0, 0x0F, 0xC0, 0x03, 0xF0, 
+0x18, 0xC0, 0x03, 0x18, 0x38, 0x60, 0x06, 0x1C, 
+0x70, 0x60, 0x06, 0x0E, 0xC0, 0x6F, 0xF6, 0x03, 
+0xC0, 0x7F, 0xFE, 0x03, 0xC0, 0x20, 0x04, 0x03, 
+0x60, 0x00, 0x00, 0x06, 0x7E, 0x00, 0x00, 0x7E, 
+0x1F, 0x00, 0x00, 0xF8, 0x03, 0x00, 0x00, 0xC0, 
+0x03, 0x1E, 0x00, 0xC0, 0x03, 0x3F, 0x38, 0xC0, 
+0x03, 0x3F, 0x7C, 0xC0, 0x02, 0x3F, 0x7C, 0x40, 
+0x06, 0x3F, 0x7C, 0x60, 0x02, 0x1E, 0x38, 0x40, 
+0x02, 0x00, 0x00, 0x40, 0x03, 0x86, 0x61, 0xC0, 
+0x03, 0x80, 0x01, 0xC0, 0x1F, 0x00, 0x00, 0xF8, 
+0x7E, 0x00, 0x00, 0x7E, 0x60, 0x12, 0x48, 0x06, 
+0xC0, 0x30, 0x0C, 0x03, 0xC0, 0x72, 0x4E, 0x03, 
+0xC0, 0x70, 0x0E, 0x03, 0x70, 0x78, 0x1E, 0x0E, 
+0x38, 0x7F, 0xFE, 0x1C, 0x18, 0xCF, 0xF3, 0x18, 
+0x0F, 0xC0, 0x03, 0xF0, 0x07, 0x00, 0x00, 0xE0};
 char inChar;
 String string;
 
@@ -128,7 +130,7 @@ void setup()
   // internally, this will display the splashscreen.
   // I kept this because it's got a cute flower
   display.display();
-  delay(7000);
+  delay(2000);
   
 
 }
@@ -166,14 +168,17 @@ void loop()
   display.stopscroll();
   break;
        case '2':
-  display.setTextSize(1);
+/*  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 2");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+  // stupid "looks like walking" dickbutt
+  walkingdickbutt();
+  display.clearDisplay();
         break;
          case '3':
   display.setTextSize(1);
@@ -220,34 +225,43 @@ void loop()
   display.stopscroll();
         break;
       case '7':
-  display.setTextSize(1);
+/*  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 7");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+//skull should flash now
+  skullflash();
+  display.clearDisplay();
         break;
         case '8':
-  display.setTextSize(1);
+/*  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 8");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+  // stupid "looks like walking" dickbutt
+  walkingdickbutt();
+  display.clearDisplay();
         break;
         case '9':
-  display.setTextSize(1);
+  /*display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking 9");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+  //skull should flash now
+  skullflash();
+  display.clearDisplay();
         break;
         case '.':
   display.setTextSize(1);
@@ -270,24 +284,30 @@ void loop()
   display.stopscroll();
         break;
    case '!':
-  display.setTextSize(1);
+/*  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking !");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+  // inverted walking dickbutt
+  invertedwalkingdickbutt();
+  display.clearDisplay();
         break;
    case '@':
-  display.setTextSize(1);
+/*  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking @");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+  //skull should flash now
+  skullflash();
+  display.clearDisplay();
         break;
    case '#':
   display.setTextSize(1);
@@ -300,14 +320,17 @@ void loop()
   display.stopscroll();
         break;
    case '$':
-  display.setTextSize(1);
+/*  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
   display.println("You Pushed Fucking $");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
-  display.stopscroll();
+  display.stopscroll();*/
+  // inverted walking dickbutt
+  invertedwalkingdickbutt();
+  display.clearDisplay();
         break;
         default:
         Serial.println(key);
@@ -368,6 +391,30 @@ for (uint8_t i=0; i<4; i++){
   display.drawBitmap(0, 0,  inverted_dickbutt_bmp, 32, 32, 1);
   display.display();
   delay(500);
+  display.clearDisplay();
+}
+}
+
+  //make skull flash
+void skullflash(void) {
+
+for (uint8_t i=0; i<2; i++){
+  display.clearDisplay();
+  display.drawBitmap(36, 0,  skull_bmp, 32, 32, 1);
+  display.display();
+  delay(250);
+  display.clearDisplay();
+  display.drawBitmap(72, 0,  skull_bmp, 32, 32, 1);
+  display.display();
+  delay(250);
+  display.clearDisplay();
+  display.drawBitmap(36, 0,  skull_bmp, 32, 32, 1);
+  display.display();
+  delay(250);
+  display.clearDisplay();
+  display.drawBitmap(72, 0,  skull_bmp, 32, 32, 1);
+  display.display();
+  delay(250);
   display.clearDisplay();
 }
 }
