@@ -12,8 +12,11 @@ https://github.com/adafruit/Adafruit-GFX-Library
 Adafruit SSD1306 OLED Library
 https://github.com/adafruit/Adafruit_SSD1306
 
+Dickbutt
+http://knowyourmeme.com/memes/dick-butt
 
-#16keypad_esp32_ssd11306_dickbutt
+
+#esp32_ssd11306_4x4keypad_dickbutt
 push a button get a dickbutt, maybe
 
 Requirements:
@@ -27,5 +30,9 @@ https://github.com/adafruit/Adafruit-GFX-Library
 Adafruit SSD1306 OLED Library
 https://github.com/adafruit/Adafruit_SSD1306
 
-16 Key Keypad
+4x4 Key Keypad
+https://cdn.instructables.com/FLP/94B2/IYEQBSYE/FLP94B2IYEQBSYE.MEDIUM.jpg
+
+Dickbutt
+http://knowyourmeme.com/memes/dick-butt
 
