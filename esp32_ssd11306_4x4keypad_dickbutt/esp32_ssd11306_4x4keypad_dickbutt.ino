@@ -23,7 +23,6 @@ const byte ROWS = 4; // Four rows
 const byte COLS = 4; // Four columns
 // Declare 2D array
 char keys[ROWS][COLS] = {
-//char randomletter = "ABCDEFGHIJKLMNOP"[random () % 16];
 // Initialize 2D array values
 for (int i = 0; i < ROWS; i++) {
   for (int j = 0; j < COLS; j++) {
