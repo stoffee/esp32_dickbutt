@@ -1,7 +1,7 @@
-/*  Keypadtest.pde
-*
-* Let's play a game
+/*
+* Dickbutt is the name of the game
 * 
+* Short game utilizing the ESP32, a 64x32 OLED, and a 4x4 Keypad.
 * 
 */
 #include <Keypad.h>
