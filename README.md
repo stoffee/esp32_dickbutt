@@ -10,7 +10,7 @@ This may cause Dickbutt
 
 ## REQUIREMENTS
 
-Arduino IDE
+Arduino IDE <br>
 https://www.arduino.cc/en/Main/Software
 
 Adafruit library
@@ -52,11 +52,9 @@ All images were resized to 32x32 monochrome Bitmap with Imagemagick
 | R4            |     IO19 |
 
 ## Help
-Adafruit OLED examples and libraries
-
+Adafruit OLED examples and libraries<br>
 https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples
 
-KeypadTutorial was my starting place for the Keypad
-
+KeypadTutorial was my starting place for the Keypad<br>
 http://playground.arduino.cc/Main/KeypadTutorial
 
