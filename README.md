@@ -58,3 +58,6 @@ https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-example
 KeypadTutorial was my starting place for the Keypad<br>
 http://playground.arduino.cc/Main/KeypadTutorial
 
+## HackerBox
+This came as part of my monthly subscription to Hackerbox in box #0015<br>
+http://www.hackerboxes.com/howitworks
