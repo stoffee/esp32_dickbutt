@@ -19,7 +19,7 @@ https://github.com/adafruit/Adafruit-GFX-Library
 Adafruit SSD1306 OLED Library <br>
 https://github.com/adafruit/Adafruit_SSD1306
 
-4x4 Key Keypad (for the game) <br>
+4x4 Key Keypad <br>
 https://cdn.instructables.com/FLP/94B2/IYEQBSYE/FLP94B2IYEQBSYE.MEDIUM.jpg
 
 Dickbutt <br>
