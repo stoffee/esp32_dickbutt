@@ -28,6 +28,11 @@ https://cdn.instructables.com/FLP/94B2/IYEQBSYE/FLP94B2IYEQBSYE.MEDIUM.jpg
 Dickbutt
 http://knowyourmeme.com/memes/dick-butt
 
+Online script to convert image to hex
+http://www.andrewlowndes.co.uk/blog/graphics/arduboy-image-converter
+
+## Dickbutt Image Specs
+All images were resized to 32x32 monochrome Bitmap with Imagemagick
 
 ## Hardware connections
 
