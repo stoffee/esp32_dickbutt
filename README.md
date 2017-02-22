@@ -40,7 +40,7 @@ All images were resized to 32x32 monochrome Bitmap with Imagemagick
 | SCL  |     IO21     |
 | SDA  |     IO22     |
 
-| 4x4 Keypad    |  ESP32 DevKit |
+| Keypad    |  ESP32 DevKit |
 | -----|------------|
 | C1            |     IO2  |
 | C2            |     IO0  |
