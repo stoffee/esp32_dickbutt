@@ -1,19 +1,15 @@
 /*  Keypadtest.pde
- *
- *  Demonstrate the simplest use of the  keypad library.
- *
- *  The first step is to connect your keypad to the
- *  Arduino  using the pin numbers listed below in
- *  rowPins[] and colPins[]. If you want to use different
- *  pins then  you  can  change  the  numbers below to
- *  match your setup.
- *
- */
+*
+* Let's play a game
+* 
+* 
+*/
 #include <Keypad.h>
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
+
 
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
@@ -21,24 +17,15 @@ Adafruit_SSD1306 display(OLED_RESET);
 //define random keymap
 const byte ROWS = 4; // Four rows
 const byte COLS = 4; // Four columns
-// Declare 2D array
-char keys[ROWS][COLS] = {
-// Initialize 2D array values
-for (int i = 0; i < ROWS; i++) {
-  for (int j = 0; j < COLS; j++) {
-    keys[i][j] = int(random(16));
-  }
-}
-}
-/*
+
 // Define the Keymap
 char keys[ROWS][COLS] = {
-  {'0','1','2','3'},
-  {'4','5','6','7'},
-  {'8','9','.',','},
-  {'!','@','#','$'}
+  {'A','B','C','D'},
+  {'E','F','G','H'},
+  {'I','J','K','L'},
+  {'M','N','O','P'}
 };
-*/
+
 
 // Connect keypad ROW0, ROW1, ROW2 and ROW3 to these Arduino pins.
 byte rowPins[ROWS] = { 15, 16, 18, 19 };
@@ -130,40 +117,6 @@ static const unsigned char PROGMEM skull_bmp[] =
 0x38, 0x7F, 0xFE, 0x1C, 0x18, 0xCF, 0xF3, 0x18, 
 0x0F, 0xC0, 0x03, 0xF0, 0x07, 0x00, 0x00, 0xE0};
 
-//define train
-#define TRAIN_HEIGHT 64 
-#define TRAIN_WIDTH  32 
-static const unsigned char PROGMEM train_bmp[] =
-{0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 
-0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 
-0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 
-0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 
-0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 0xBF, 0xFF, 
-0xFF, 0x80, 0xFD, 0xFF, 0x5F, 0xC7, 0xFF, 0x80, 
-0xFA, 0xFE, 0xCF, 0xB7, 0xFF, 0x80, 0xF7, 0x78, 
-0xE0, 0x37, 0x8F, 0x80, 0xF3, 0x06, 0x1F, 0x80, 
-0x26, 0x80, 0xE0, 0x20, 0x60, 0x10, 0x02, 0x80, 
-0xEE, 0x9F, 0x3F, 0xDF, 0xFB, 0x80, 0xFE, 0xFF, 
-0x2E, 0xC7, 0xB7, 0x80, 0xFE, 0x82, 0x20, 0x80, 
-0x37, 0x80, 0xFE, 0xBA, 0x8E, 0x87, 0xB7, 0x80, 
-0xFE, 0xBA, 0x0E, 0x87, 0x6F, 0x80, 0xFE, 0xBB, 
-0x06, 0xC7, 0x71, 0x80, 0xFC, 0x7C, 0x07, 0x03, 
-0xB0, 0x80, 0xFE, 0xFF, 0x3F, 0x8F, 0x8E, 0x80, 
-0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 
-0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 
-0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 
-0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 
-0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 
-0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 
-0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 
-0xFF, 0xFF, 0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 
-0xFF, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 
-0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-0x00, 0x00, 0x00, 0x00, 0x00, 0x00}
-;
-
 
 char inChar;
 String string;
@@ -174,7 +127,16 @@ void setup()
     // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)
   // init done
-  
+
+//randomize the keypad
+// Initialize 2D array values
+  for (int i = 0; i < ROWS; i++) {
+    for (int j = 0; j < COLS; j++) {
+      keys[i][j] = "ABCDEFGHIJKLMNOP"[rand () % 16];
+//       keys[i][j] = "PONABCKDEFGHIJLM"[rand () % 16];
+    }
+} 
+
   // Show image buffer on the display hardware.
   // Since the buffer is intialized with an Adafruit splashscreen
   // internally, this will display the splashscreen.
@@ -193,44 +155,27 @@ void loop()
   {
     switch (key)
     {
-      case '0':
-  /*display.setTextSize(2);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 0");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();
-  display.clearDisplay();*/
+      case 'A':
 // stupid "looks like walking" dickbutt
   walkingdickbutt();
   display.clearDisplay();
         break;
-         case '1':
+         case 'B':
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
-  display.println("You Pushed Fucking 1");
+  display.println("You Pushed B");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
   display.stopscroll();
   break;
-       case '2':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 2");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+       case 'C':
   // stupid "looks like walking" dickbutt
   walkingdickbutt();
   display.clearDisplay();
         break;
-         case '3':
+         case 'D':
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
@@ -240,147 +185,77 @@ void loop()
   delay(2000);
   display.stopscroll();
         break;
-        case '4':
-/*  display.setTextSize(2);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 4");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();
-  display.clearDisplay();*/
+        case 'E':
 // inverted walking dickbutt
-  invertedwalkingdickbutt();
+  skullflash();
   display.clearDisplay();
         break;
-      case '5':
+      case 'F':
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
-  display.println("You Pushed Fucking 5");
+  display.println(" <^> <(@_@)> <^> FUUUU <^> <(@_@)> <^>");
+  display.display();
+  display.startscrollleft(0x00, 0x0F);
+  delay(2500);
+  display.stopscroll();
+        break;
+         case 'G':
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.setCursor(0,10);
+  display.println("Ahhh, touch me");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
   display.stopscroll();
         break;
-         case '6':
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 6");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();
-        break;
-      case '7':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 7");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+      case 'H':
 //skull should flash now
   skullflash();
   display.clearDisplay();
         break;
-        case '8':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 8");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+        case 'I':
   // stupid "looks like walking" dickbutt
   walkingdickbutt();
   display.clearDisplay();
         break;
-        case '9':
-  /*display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking 9");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+        case 'J':
   //skull should flash now
   skullflash();
   display.clearDisplay();
         break;
-        case '.':
+        case 'K':
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,10);
-  display.println("You Pushed Fucking .");
+  display.println("I will Kick you!");
   display.display();
   display.startscrollright(0x00, 0x0F);
   delay(2000);
   display.stopscroll();
         break;
-   case ',':
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking ,");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();
+   case 'L':
+  //skull should flash now
+  skullflash();
+  display.clearDisplay();
         break;
-   case '!':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking !");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+   case 'M':
   // inverted walking dickbutt
-  invertedwalkingdickbutt();
+  skullflash();
   display.clearDisplay();
         break;
-   case '@':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking @");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+   case 'N':
   //skull should flash now
   skullflash();
   display.clearDisplay();
         break;
-   case '#':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking #");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
- //A2MTrain GO
-  a2mtrain();
+   case 'O':
+ //Skull GO
+  skullflash();
   display.clearDisplay();
         break;
-   case '$':
-/*  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.setCursor(0,10);
-  display.println("You Pushed Fucking $");
-  display.display();
-  display.startscrollright(0x00, 0x0F);
-  delay(2000);
-  display.stopscroll();*/
+   case 'P':
   // inverted walking dickbutt
   invertedwalkingdickbutt();
   display.clearDisplay();
@@ -433,7 +308,7 @@ for (uint8_t i=0; i<2; i++){
   display.display();
   delay(500);
   display.clearDisplay();
-  display.drawBitmap(72, 0,  inverted_dickbutt_bmp, 32, 32, 1);
+  display.drawBitmap(72, 4,  inverted_dickbutt_bmp, 32, 32, 1);
   display.display();
   delay(500);
   display.clearDisplay();
@@ -441,7 +316,7 @@ for (uint8_t i=0; i<2; i++){
   display.display();
   delay(500);
   display.clearDisplay();
-  display.drawBitmap(0, 0,  inverted_dickbutt_bmp, 32, 32, 1);
+  display.drawBitmap(0, 4,  inverted_dickbutt_bmp, 32, 32, 1);
   display.display();
   delay(500);
   display.clearDisplay();
@@ -455,46 +330,20 @@ for (uint8_t i=0; i<2; i++){
   display.clearDisplay();
   display.drawBitmap(36, 0,  skull_bmp, SKULL_HEIGHT, SKULL_WIDTH, 1);
   display.display();
-  delay(250);
+  delay(50);
   display.clearDisplay();
   display.drawBitmap(72, 0,  skull_bmp, SKULL_HEIGHT, SKULL_WIDTH, 1);
   display.display();
-  delay(250);
+  delay(50);
   display.clearDisplay();
   display.drawBitmap(36, 0,  skull_bmp, SKULL_HEIGHT, SKULL_WIDTH, 1);
   display.display();
-  delay(250);
+  delay(50);
   display.clearDisplay();
   display.drawBitmap(72, 0,  skull_bmp, SKULL_HEIGHT, SKULL_WIDTH, 1);
   display.display();
-  delay(250);
+  delay(50);
   display.clearDisplay();
-}
-}
-
-
-  //make train
-void a2mtrain(void) {
-
-for (uint8_t i=0; i<2; i++){
-  display.clearDisplay();
-  display.drawBitmap(0, 0,  train_bmp, TRAIN_HEIGHT, TRAIN_WIDTH, 1);
-  display.display();
-  delay(250);
-  display.clearDisplay();
-  display.drawBitmap(0, 0,  train_bmp, TRAIN_HEIGHT, TRAIN_WIDTH, 1);
-  display.display();
-  delay(250);
-  display.clearDisplay();
-  display.drawBitmap(0, 0,  train_bmp, TRAIN_HEIGHT, TRAIN_WIDTH, 1);
-  display.display();
-  delay(250);
-  display.clearDisplay();
-  display.drawBitmap(0, 0,  train_bmp, TRAIN_HEIGHT, TRAIN_WIDTH, 1);
-  display.display();
-  delay(250);
-  display.clearDisplay();
-  
 }
 }
 
