@@ -53,3 +53,11 @@ All images were resized to 32x32 monochrome Bitmap with Imagemagick
 | R2            |     IO16 |
 | R3            |     IO18 |
 | R4            |     IO19 |
+
+## Help
+Adafruit OLED examples and libraries
+https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples
+
+KeypadTutorial was my starting place for the Keypad
+http://playground.arduino.cc/Main/KeypadTutorial
+
