@@ -39,7 +39,8 @@ Dickbutt
 http://knowyourmeme.com/memes/dick-butt
 
 
-Hardware connections:
+Hardware connections
+
 | OLED | ESP32 DevKit |
 | -----|--------------|
 | VCC  |     3.3V     |
