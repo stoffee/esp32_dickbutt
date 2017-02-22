@@ -13,19 +13,19 @@ This may cause Dickbutt
 Arduino IDE <br>
 https://www.arduino.cc/en/Main/Software
 
-Adafruit library
+Adafruit library <br>
 https://github.com/adafruit/Adafruit-GFX-Library
 
-Adafruit SSD1306 OLED Library
+Adafruit SSD1306 OLED Library <br>
 https://github.com/adafruit/Adafruit_SSD1306
 
-4x4 Key Keypad (for the game)
+4x4 Key Keypad (for the game) <br>
 https://cdn.instructables.com/FLP/94B2/IYEQBSYE/FLP94B2IYEQBSYE.MEDIUM.jpg
 
-Dickbutt
+Dickbutt <br>
 http://knowyourmeme.com/memes/dick-butt
 
-Online script to convert image to hex
+Online script to convert image to hex <br>
 http://www.andrewlowndes.co.uk/blog/graphics/arduboy-image-converter
 
 ## Dickbutt Image Specs
