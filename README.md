@@ -41,18 +41,19 @@ http://knowyourmeme.com/memes/dick-butt
 
 Hardware connections:
 | OLED | ESP32 DevKit |
-| -----|:------------:|
+| -----|--------------|
 | VCC  |     3.3V     |
 | GND  |     GND      |
 | SCL  |     IO21     |
 | SDA  |     IO22     |
 
-| 4x4 Keypad    | : ESP32 DevKit |
-| C1            | :    IO2 |
-| C2            | :    IO0 |
-| C3            | :    IO4 |
-| C4            | :    IO5 |
-| R1            | :    IO15 |
-| R2            | :    IO16 |
-| R3            | :    IO18 |
-| R4            | :    IO19 |
+| 4x4 Keypad    |  ESP32 DevKit |
+| -----|------------|
+| C1            |     IO2 |
+| C2            |     IO0 |
+| C3            |     IO4 |
+| C4            |     IO5 |
+| R1            |     IO15 |
+| R2            |     IO16 |
+| R3            |     IO18 |
+| R4            |     IO19 |
