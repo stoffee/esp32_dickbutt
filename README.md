@@ -1,5 +1,6 @@
 # esp32_ssd_dickbutt
 Dancing and raining dickbutt for use with esp32, SSD1306 OLED, and dickbutt
+Based on the Adafruit OLED example.
 
 Requirements:
 
