@@ -55,7 +55,7 @@ All images were resized to 32x32 monochrome Bitmap with Imagemagick
 Adafruit OLED examples and libraries<br>
 https://learn.adafruit.com/monochrome-oled-breakouts/arduino-library-and-examples
 
-KeypadTutorial was my starting place for the Keypad<br>
+KeypadTutorial<br>
 http://playground.arduino.cc/Main/KeypadTutorial
 
 ## HackerBox
