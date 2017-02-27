@@ -1,8 +1,8 @@
 
-# esp32_ssd_dickbutt
+# esp32_ssd1306_dickbutt
 Dancing and raining dickbutt for use with esp32, SSD1306 OLED, and dickbutt. <br>This is based on the Adafruit OLED example and uses the snowflakes function for the raining dickbutt.
 
-# esp32_ssd11306_4x4keypad_dickbutt
+# esp32_ssd1306_4x4keypad_dickbutt
 Game of chance. Just push a button get a dickbutt... maybe. <br>This is based on the Adafruit example and the Keypadtest.
 
 ## Warning
