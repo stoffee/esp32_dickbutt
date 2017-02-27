@@ -59,7 +59,7 @@ KeypadTutorial<br>
 http://playground.arduino.cc/Main/KeypadTutorial
 
 ## HackerBox
-This came as part of my monthly subscription to Hackerbox in box #0015<br>
+This is a project based on my monthly subscription to Hackerbox, in box #0015<br>
 http://www.hackerboxes.com/howitworks
 
 ## License
